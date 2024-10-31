@@ -1,0 +1,58 @@
+.dashboard {
+    padding: 10px;
+}
+
+.botones-graficos {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.botones-graficos button {
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botones-graficos button:hover {
+    background-color: #e0e0e0;
+}
+
+.grafico {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.grafico h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.panel-principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.grafico {
+    width: 10%;
+    margin-bottom: 20px;
+}
+
+.panel-secundario {
+    margin-top: 10px;
+}
+
+.filtros {
+    display: flex;
+    gap: 5px;
+}
+
+select, button {
+    padding: 5px;
+}

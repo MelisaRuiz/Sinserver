@@ -1,0 +1,197 @@
+
+
+.parcela {
+  display: flex;
+  flex-direction: column; /* Cambiamos la dirección de la columna */
+  padding: 10px;
+}
+
+
+.top {
+  display: flex;
+  height: 200px;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.regi {
+  padding: 20px;
+  width: calc(30.33% - 10px);
+}
+
+.sidebaredos {
+  padding: 20px;
+  width: calc(45.33% - 10px);
+}
+
+.sidebaretres {
+  padding: 20px;
+  width: calc(24.33% - 10px);
+}
+
+.grafics {
+  height: 400px;
+  width: 70%;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+
+.regi, .sidebaredos, .grafics, .sidebaretres{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+
+.parcela button {
+  padding: 5px;
+  background-color: rgb(255, 255, 255); /* Color del botón activo para administración */
+  box-shadow:  0 1px 5px rgba(146, 230, 255, 0.704); 
+  border: none;
+  cursor: pointer;
+  color: black;
+  margin: 5px;
+  display: inline;
+}
+
+.parcela button:hover {
+  box-shadow:  0 1px 5px rgba(79, 173, 201, 0.704); /* Añadido el desplazamiento y difuminado */
+}
+
+
+
+.aviso-parcelas, .aviso-actividades {
+  color: #666;
+  font-style: italic;
+}
+
+.tabla-actividades {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #fafafa;
+  font-weight: bold;
+}
+.modal {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+  position: fixed; /* Fijamos el modal */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrado absoluto */
+  background-color: #ffffff;
+  width: 650px;
+  z-index: 9999; /* Asegura que esté sobre todo lo demás */
+}
+
+.modal-overlay {
+  position: fixed; /* Ocupará toda la página */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro transparente */
+  z-index: 9998; /* Justo debajo del modal */
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 350px;
+  height: 250px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  color: #666;
+}
+
+/* Para otros modales dentro de actividades */
+.actividad .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 9999;
+  width: 400px;
+  height: 350px;
+}
+
+.actividad.modal-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 400px;
+  height: 250px;
+}
+
+.actividad .close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.actividad .close-modal:hover {
+  color: #666;
+}
+
+input[type="text"], input[type="email"],input[type="number"], input[type="password"], textarea {
+  padding: 10px;
+  width: 95%;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin: 10px;
+  transition: border-color 0.3s;
+  background-color: #ffffff;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, textarea:focus {
+  box-shadow:  0 1px 5px rgba(79, 173, 201, 0.704);
+  background-color: #ffffff;
+  outline: none;
+}
+textarea {
+  resize: none; /* Desactivar el redimensionado del textarea */
+  height:40px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}

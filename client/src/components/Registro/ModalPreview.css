@@ -1,0 +1,125 @@
+.modal-preview {
+  display: flex;
+  flex-direction: column;
+  margin: auto; /* Centrado horizontal */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+  background-color: #ffffff;
+  width: 650px;
+  position: fixed; /* Fija el modal en la pantalla */
+  top: 50%; /* Centrado vertical */
+  left: 50%; /* Centrado horizontal */
+  transform: translate(-50%, -50%); /* Ajuste para centrar completamente */
+  z-index: 10000; /* Valor alto para estar por encima de todos los elementos */
+}
+
+.modal-overlay {
+  position: fixed; /* Hace que ocupe toda la pantalla */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+  z-index: 9999; /* Asegura que esté justo debajo del modal */
+}
+
+.modal-preview h2 {
+  margin: 5px;
+}
+
+.modal-preview-content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  position: relative;
+  width: 550px;
+  height: 250px;
+}
+
+.modal-preview-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-preview-close:hover {
+  color: #666;
+}
+
+
+.preview-input {
+  padding: 10px;
+  width: 95%;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin: 10px;
+  transition: border-color 0.3s;
+  background-color: #ffffff;
+}
+
+.preview-input:focus {
+  box-shadow: 0 1px 5px rgba(79, 173, 201, 0.704);
+  background-color: #ffffff;
+  outline: none;
+}
+
+.preview-textarea {
+  resize: none;
+  height: 40px;
+}
+
+.preview-checkbox-container {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+/* Estilos de botones y tablas */
+.preview-buttons {
+  display: flex;
+  margin-top: 10px;
+}
+
+.preview-button {
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1px 5px rgba(146, 230, 255, 0.704);
+  border: none;
+  cursor: pointer;
+  color: black;
+  margin: 5px;
+}
+
+.preview-button.active {
+  background-color: #f0f0f0;
+}
+
+.preview-button:hover {
+  box-shadow: 0 1px 5px rgba(79, 173, 201, 0.704);
+}
+
+.preview-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.preview-table th, .preview-table td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.preview-table th {
+  background-color: #fafafa;
+  font-weight: bold;
+}

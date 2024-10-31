@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.main-content{
+  display: flex;
+  flex-direction: column; /* Cambiamos la dirección de la columna */
+  padding: 10px;
+}
+
+
+/* Agrupar main-content y sidebare para alinearlos en una fila */
+.top-row {
+  display: flex;
+  height: 200px;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.container {
+
+  padding: 20px;
+  width: calc(33.33% - 10px);
+}
+
+
+.sidebare {
+  padding: 20px;
+  width: calc(33.33% - 10px);
+}
+
+.container-grafics {
+  height: 400px;
+  width: 50%;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 20px;
+}
+
+.modal {
+  position: fixed;
+  top: 35%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: 400px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.modal h3 {
+  display: flex;
+  margin-left: 40%;
+}
+
+.btn-cargar {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  float: right;
+}
+
+.btn-cargar:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+.estado-financiero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.estado-financiero div {
+  padding: 10px;
+}
+
+
+.preview {
+  position: fixed;
+  top: 40%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+
+/* Añadir box-shadow para dar relieve */
+.container, .sidebare, .container-grafics, .preview, .modal {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+
+.top-row button {
+  padding: 5px;
+  background-color: rgb(255, 255, 255); /* Color del botón activo para administración */
+  box-shadow:  0 1px 5px rgb(177, 175, 0, 0.704); /* Añadido el desplazamiento y difuminado */
+  border: none;
+  cursor: pointer;
+}
+
+.top-row button:hover {
+  box-shadow:  0 1px 5px rgb(177, 175, 0, 0.704); /* Añadido el desplazamiento y difuminado */
+}
+
+
+.top-row .modal {
+  display: flex;
+  flex-direction: column; 
+  height: 300px; /* Altura fija del modal */
+  display: block; /* Modales como bloques */
+  margin-top: 10px; /* Margen superior entre modales */
+ /* Ancho ajustado con márgenes */
+  background-color: #ffffff; /* Color de fondo */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para los modales */
+  padding: 20px; /* Espacio interno */
+}
+
+.modal-preview table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+
+.modal-preview th, .modal-preview td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.modal-preview th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.modal-preview tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

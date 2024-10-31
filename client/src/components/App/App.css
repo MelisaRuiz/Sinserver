@@ -1,0 +1,32 @@
+.app-container {
+  display: flex; /* Asegúrate de que el contenedor principal esté configurado para flex */
+  transition: all 0.3s ease; /* Suaviza la transición */
+}
+
+.sidebar {
+  width: 250px; /* Ancho normal de la barra lateral */
+  transition: width 0.3s ease; /* Suaviza la transición del ancho */
+}
+
+.sidebar .gestion-contenedor .boton-gestion, .administracion-contenedor .boton-administracion, .comunidad-contenedor .boton-comunidad{
+  transition: width 0.3s ease; /* Suaviza la transición del ancho */
+}
+
+.sidebar-minimized .sidebar {
+  width: 75px; /* Ancho de la barra lateral minimizada */
+}
+
+.main-content {
+  flex-grow: 1; /* Permite que el contenido principal use el espacio restante */
+  transition: margin-left 0.3s ease; /* Suaviza la transición del margen */
+}
+
+.sidebar-minimized .main-content {
+
+}
+
+.parcela {
+  flex-grow: 1; /* Permite que el contenido principal use el espacio restante */
+  transition: margin-left 0.3s ease; /* Suaviza la transición del margen */
+}
+

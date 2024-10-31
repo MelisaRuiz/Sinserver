@@ -1,0 +1,102 @@
+/* Asegúrate de que el mapa ocupe todo el espacio disponible */
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.leaflet-draw-toolbar {
+  transform: scale(1.2);
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.leaflet-draw-toolbar .leaflet-draw-draw-polygon {
+  background-color: #4CAF50 !important;
+  border: none !important;
+  border-radius: 4px !important;
+  color: white !important;
+  padding: 6px 10px !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  background-image: none !important;
+}
+
+.leaflet-draw-toolbar .leaflet-draw-draw-polygon:hover {
+  background-color: #45a049 !important;
+}
+
+/* Ocultar el ícono original */
+.leaflet-draw-toolbar .leaflet-draw-draw-polygon span {
+  display: none !important;
+}
+
+/* Añadir texto personalizado */
+.leaflet-draw-toolbar .leaflet-draw-draw-polygon:after {
+  content: "Seleccionar" !important;
+  display: inline !important;
+}
+
+.leaflet-draw-actions {
+  left: 0 !important;
+  top: 40px !important;
+}
+
+.leaflet-draw-actions a {
+  background-color: #008CBA !important;
+  color: white !important;
+  padding: 4px 8px !important;
+  font-size: 12px !important;
+  margin: 2px !important;
+  cursor: pointer !important;
+  border-radius: 4px !important;
+  transition: all 0.3s ease !important;
+  display: inline-block !important;
+  border: none !important;
+}
+
+.leaflet-draw-actions a:hover {
+  background-color: #007B9A !important;
+}
+
+/* Ocultar el mensaje del cursor */
+.leaflet-draw-tooltip {
+  display: none !important;
+}
+
+/* Asegurar que los controles de dibujo sean visibles */
+.leaflet-draw.leaflet-control {
+  display: block !important;
+}
+
+/* Ajustar el tamaño y la posición de los botones si es necesario */
+.leaflet-draw-toolbar .leaflet-draw-draw-polygon {
+  width: auto !important;
+  height: auto !important;
+}
+
+/* Asegurar que los botones azules estén en una línea horizontal */
+.leaflet-draw-actions {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+}
+
+.leaflet-draw-actions li {
+  display: inline-block !important;
+  margin-right: 5px !important;
+}
+
+/* Eliminar cualquier borde o sombra adicional */
+.leaflet-draw-toolbar a, .leaflet-draw-actions a {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Asegurarse de que los controles estén por encima del mapa */
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 1000 !important;
+}
